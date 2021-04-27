@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <title>Students List</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        *{
+            list-style: None;
+        }
+        header{
+                height: 80px;
+                width: 100%;
+                background-color: rgba(246, 36, 89, 1);
+                position: fixed;
+                top:0;
+                z-index: 10;
+            }
+            .container{
+                width:100%;
+                padding-left:15px;
+                padding-right:15px;
+                margin-left:auto;
+                margin-right:auto;
+               
+            }
+            .top-container{
+                padding-top:100px;
+                padding-bottom:100px;
+                height: 800px;
+                width: 100%;
+                text-align: center;
+                margin: 0 auto;
+            }
+            .text1{
+                font-size: 40px;
+            }
+            .text2{
+                font-size:30px;
+            }
+    </style>
     </head>
     <body>
-        <h1>hello</h1>
-        <ul>
-        {%for a in data%}
-        <li>{{a.name}}</li>
-        {% endfor %}
-        </ul>
-        
-        {{data}}
+        <header>
+            <h1>Student List</h1>
+        </header>
+        <div class="top-container">
+            <div class="container">
+                <span class="text1">Leaf Village</span>
+                <span class="text2">Shinobi</span>
+                <ul>
+                    {%for a in data%}
+                    <li>{{a.name}}</li>
+                    {% endfor %}
+                    </ul>
+            </div>
+        </div>
+       
     </body>
 </html>
